@@ -18,7 +18,7 @@ public class PaintCalc
 		l=sc.nextDouble();
 		System.out.print("Width: ");
 		w=sc.nextDouble();
-		System.out.print("Width: ");
+		System.out.print("Height: ");
 		h=sc.nextDouble();
 		System.out.print("\nHow many doors does the room have? ");
 		door=sc.nextInt();
@@ -32,7 +32,7 @@ public class PaintCalc
 		System.out.print(ttl);
 
 		//final println
-		System.out.println("\nTotal square feet: "+
+		System.out.println("\nTotal square feet: "+ttl+" ft");
 	}
 }
 
