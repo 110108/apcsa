@@ -13,7 +13,7 @@ public class modClock
 		int eMin;
 		Scanner sc=new Scanner(System.in);
 
-
+		System.out.print("Please enter start time: ");
 	}
 }
 
