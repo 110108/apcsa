@@ -6,14 +6,32 @@ public class modClock
 	public static void main(String[] args)
 	{
 		int sHour;
-		int pHour
+		int pHour;
 		int eHour;
 		int sMin;
 		int pMin;
 		int eMin;
-		Scanner sc=new Scanner(System.in);
+		final int HOURS_PER_DAY = 24;
+		final int MINUTES_PER_HOUR = 60;
+		Scanner sc = new Scanner(System.in);
 
-		System.out.print("Please enter start time: ");
+		//gather info
+		System.out.print("Please enter start hour: ");
+		sHour = sc.nextInt();
+		System.out.print("Please enter start minute: ");
+		sMin = sc.nextInt();
+		System.out.print("Please enter the number of hours that have passed: ");
+		pHour = sc.nextInt();
+		System.out.print("Please enter the number of minutes that have passed: ");
+		pMin = sc.nextInt();
+
+		//calculations
+		sHour %= HOURS_PER_DAY;
+		sMin %= MINUTES_PER_HOUR;
+		pHour %= HOURS_PER_DAY;
+		pHour += (pMin/MINUTES_PER_HOUR);
+		pMin %= MINUTES_PER_HOUR;
+		System.out.println((sHour+pHour)+":"+(sMin+pMin));
 	}
 }
 
