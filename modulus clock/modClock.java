@@ -31,7 +31,11 @@ public class modClock
 		pHour %= HOURS_PER_DAY;
 		pHour += (pMin/MINUTES_PER_HOUR);
 		pMin %= MINUTES_PER_HOUR;
-		System.out.println((sHour+pHour)+":"+(sMin+pMin));
+		eHour = ((sHour + pHour) % HOURS_PER_DAY);
+		eMin = ((sMin + pMin) % MINUTES_PER_HOUR);
+
+		//final output
+		System.out.println("\nThe final time is "+(eHour)+":"+(eMin));
 	}
 }
 
