@@ -5,6 +5,6 @@ public class DialogViewer
    {
       String name = JOptionPane.showInputDialog("What is your name?");
       System.out.println("Hello, "+name+"!");
-      System.out.print(
+      String op = JOptionPane.showInputDialog("What woluld you like me to do?");
    }
 }
