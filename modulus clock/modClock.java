@@ -16,7 +16,7 @@ public class modClock
 		Scanner sc = new Scanner(System.in);
 
 		//gather info
-		System.out.print("Please enter start hour: ");
+		System.out.print("Please enter start hour(24 hour): ");
 		sHour = sc.nextInt();
 		System.out.print("Please enter start minute: ");
 		sMin = sc.nextInt();
