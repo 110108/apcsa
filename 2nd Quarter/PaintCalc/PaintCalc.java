@@ -10,8 +10,9 @@ public class PaintCalc
 		double w;
 		double h;
 		double ttl;
-		double galNum = 0;
-		double quartNum = 0;
+		int totl;
+		int galNum = 0;
+		int quartNum = 0;
 		int win;
 		int door;
 		final int GALLON_COVERAGE = 300;
@@ -53,9 +54,10 @@ public class PaintCalc
 		}
 		else if(ttl/GALLON_COVERAGE<=1)
 		{
-			galNum = ttl/GALLON_COVERAGE;
+			totl = (int)Math.ceil(ttl);
+			galNum = totl/GALLON_COVERAGE;
 			ttl-=(galNum*GALLON_COVERAGE);
-			quartNum = ttl/QUART_COVERAGE;
+			quartNum = totl/QUART_COVERAGE;
 			ttl-=(quartNum*QUART_COVERAGE);
 			if(ttl<0)
 			{
