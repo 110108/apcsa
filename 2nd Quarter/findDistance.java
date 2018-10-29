@@ -13,7 +13,11 @@ public class findDistance
       int y1=0;
       int y2=0;
       int y3=0;
+      double d1;
+      double d2;
+      double d3;
 
+      //colecring input
       for(int i=0; i <= 3; i++){
 		  int x=0;
 		  int y=0;
@@ -42,6 +46,9 @@ public class findDistance
 			  y=y3;
 		  }
 	  }
-	  //
+
+	  //math
+	  d1 = math.sqrt(math.pow((x1-x0),2) + math.pow((y1-y0),2));
+	  System.out.println(d1);
    }
 }
