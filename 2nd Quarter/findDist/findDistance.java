@@ -47,7 +47,7 @@ public class findDistance
 		  }
 	  }
 
-	  //math
+	  //Math
 	  d1 = Math.sqrt(Math.pow((x1-x0),2) + Math.pow((y1-y0),2));
 	  d2 = Math.sqrt(Math.pow((x2-x0),2) + Math.pow((y2-y0),2));
 	  d3 = Math.sqrt(Math.pow((x3-x0),2) + Math.pow((y3-y0),2));
@@ -56,6 +56,10 @@ public class findDistance
 	  System.out.println("\nDistance to Errand one: " + d1);
 	  System.out.println("Distance to Errand two: " + d2);
 	  System.out.println("Distance to Errand three: " + d3 + "\n");
+	  if(Math.abs(d1 - d2)<= 0.5 && (Math.abs(d1 - d3) > 0.5 && Math.abs(d2 - d3) > 0.5)){System.out.println("Errand one and two are similar, errand three is furthest");}
+	  if(Math.abs(d3 - d2) <= 0.5 && (Math.abs(d3 - d1) > 0.5 && Math.abs(d2 - d1) > 0.5)){System.out.println("Errand three and two are similar, errand one is farthest");}
+	  if(Math.abs(d3 - d1) <= 0.5 && (Math.abs(d3 - d2) > 0.5 && Math.abs(d1 - d2) > 0.5)){System.out.println("Errand three and one are similar, errand two is farthest");}
+	  if(Math.abs(d3 - d2) <= 0.5 && Math.abs(d3 - d1) <= 0.5 && Math.abs(d2 - d1) <= 0.5){System.out.println("The three errands are similar");}
 	  if(d1 < d2 && d1 < d3){System.out.println("Errand one is closest.");}
 	  if(d2 < d1 && d2 < d3){System.out.println("Errand two is closest.");}
 	  if(d3 < d1 && d3 < d2){System.out.println("Errand three is closest.");}
