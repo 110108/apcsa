@@ -63,16 +63,15 @@ public class PaintCalc
 			totl = (int)Math.ceil(ttl);
 			galNum = (totl/GALLON_COVERAGE);
 			ttl-=(galNum*GALLON_COVERAGE);
-			//quartNum = totl/QUART_COVERAGE;
-			//ttl-=(quartNum*QUART_COVERAGE);
-			if(ttl<0)
+			quartNum = (int)ttl/QUART_COVERAGE;
+			ttl-=(quartNum*QUART_COVERAGE);
+			if(ttl>0)
 			{
 				quartNum++;
 			}
 		}
 
 		//final outs
-		System.out.println(totl+"\n"+ttl);
 		System.out.println("Total number of gallons: " + galNum);
 		System.out.println("Total number of quarts: " + quartNum);
 	}

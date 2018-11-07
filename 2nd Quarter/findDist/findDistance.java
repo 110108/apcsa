@@ -63,5 +63,6 @@ public class findDistance
 	  if(d1 < d2 && d1 < d3){System.out.println("Errand one is closest.");}
 	  if(d2 < d1 && d2 < d3){System.out.println("Errand two is closest.");}
 	  if(d3 < d1 && d3 < d2){System.out.println("Errand three is closest.");}
+	  System.out.println("");
    }
 }
