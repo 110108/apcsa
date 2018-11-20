@@ -5,19 +5,30 @@ public class R6_4
    public static void main(String[] args) throws Exception
    {
       Scanner sc = new Scanner(System.in);
-      int in;
+      int x;
+      int sqr=0;
+      int tns=0;
+      int p2=0;
 
       System.out.print("Gimmie a positive integer: ");
-      in = sc.nextInt();
+      x = sc.nextInt();
 
-      while(/*code*/)
+      System.out.print("Squares less than "+x+" =");
+      while(Math.pow(sqr,2)<x)
       {
-		  /*morecode*/
+		  System.out.print(" "+(int)(Math.pow(sqr, 2))+" ");
+		  sqr+=1;
 	  }
 
-	  while(/*code*/)
+	  System.out.print("Tens less than "+x+" =");
+	  while(tns<x)
 	  {
-		  /*morecode*/
+
+	  }
+
+	  while(p2<x)
+	  	  {
+	  		  /*morecode*/
 	  }
    }
 }
