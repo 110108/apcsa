@@ -27,6 +27,8 @@ public class seatingArray
    {
       Scanner sc = new Scanner(System.in);
       int seats;
+      int firstSeat = -1;
+      int nextSeat = -1;
       Boolean[] seating;
 
       System.out.print("please enter the number of seats: ");
@@ -39,8 +41,11 @@ public class seatingArray
 	  seating = new Boolean[seats];
 	  System.out.println(seating.length);
 
+	  System.out.println(firstSeat);
+
 	  for(int i = 0; i < seating.length; i++){
-		  //
+		  if(seating[i] == true){firstSeat = i;}
+		  if((seating[i]==true)&&(firstSeat != -1)){nextSeat = i;}
 	  }
    }
 }
