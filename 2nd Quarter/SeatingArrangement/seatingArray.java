@@ -27,9 +27,10 @@ public class seatingArray
    {
       Scanner sc = new Scanner(System.in);
       int seats;
+      int seat;
       int firstSeat = -1;
       int nextSeat = -1;
-      Boolean[] seating;
+      boolean[] seating;
 
       System.out.print("please enter the number of seats: ");
       while(!sc.hasNextInt()){
@@ -38,13 +39,15 @@ public class seatingArray
 	  }
 	  seats = sc.nextInt();
 
-	  seating = new Boolean[seats];
+	  seating = new boolean[seats];
 	  System.out.println(seating.length);
-
-	  System.out.println(firstSeat);
 
 	  for(int i = 0; i < seating.length; i++){
 		  if(seating[i] == true){firstSeat = i;}
+		  if(firstSeat==-1){
+			  seat=((seating.length+1)/2);
+			  break;
+			  }
 		  if((seating[i]==true)&&(firstSeat != -1)){nextSeat = i;}
 	  }
    }
