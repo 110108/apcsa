@@ -17,6 +17,11 @@ __ __  X  __ __  X  __ __  X  __
 
 This will continue until all seats are filled.
 use first distanced seat
+
+todo:
+get the first seat and divide the array
+fix second half filling
+fix print
 */
 import java.util.Scanner;
 import java.util.Random;
@@ -46,11 +51,12 @@ public class seatingArray
       for(int i = 0; i < seating.length; i++){
         seating[i] = false;
       }
-      //System.out.println(seating.length);
 
+
+      //main loop
       int count = 0;
       do{
-        if(firstSeat==-1){
+        if(count==0){
 			if(seating.length > 1){
 				seat=firstSeat=((seating.length)/2);
 			}
@@ -58,19 +64,28 @@ public class seatingArray
 				seat=0;
 			}
           seating[seat] = true;
+          count++;
           continue;
         }
-        count++;
-        for(int i = 0; i < seating.length; i++){
-          if(seating[i] == true){firstSeat = i;}
-          if((seating[i]==true)&&(firstSeat != -1)){nextSeat = i;}
-        }
-        //System.out.println();
-        //System.out.println(seating.toString() + " " + count);
-      }while((!seating[seating.length-1] == true)&&(count < (seating.length * 2)));
-      //System.out.println(seat);
-      //System.out.println(firstSeat);
-      //System.out.println((seating.length+1)/2);
+
+        else{
+			count++;
+			for(int i = 0; i < seating.length; i++){
+				if(seating[i] == true){firstSeat = i;}
+				if((seating[i]==true)&&(firstSeat != -1)){nextSeat = i;}
+				if(i == firstSeat){break;}
+			}
+			//
+			firstSeat = -1;
+		}
+
+
+        //testing stuff
+        System.out.println("main do while");
+        System.out.println(Arrays.toString(seating) + " " + count);
+      }while((!seating[0] == true)&&(count < (seating.length * 2)));
+
+      //print statement(s)
       System.out.println(Arrays.toString(seating));
     }
   }
