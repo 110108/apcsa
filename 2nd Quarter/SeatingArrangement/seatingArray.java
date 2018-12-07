@@ -71,9 +71,11 @@ public class seatingArray
         else{
 			count++;
 			for(int i = 0; i < seating.length; i++){
-				if(seating[i] == true){firstSeat = i;}
-				if((seating[i]==true)&&(firstSeat != -1)){nextSeat = i;}
-				if(i == firstSeat){break;}
+				if(seating[i] == true){
+					if(firstSeat == -1){firstSeat = i;}
+					if(firstSeat != -1){nextSeat = i;}
+					//
+				}
 			}
 			//
 			firstSeat = -1;
@@ -81,7 +83,7 @@ public class seatingArray
 
 
         //testing stuff
-        System.out.println("main do while");
+        System.out.println("\nmain do while\n");
         System.out.println(Arrays.toString(seating) + " " + count);
       }while((!seating[0] == true)&&(count < (seating.length * 2)));
 
