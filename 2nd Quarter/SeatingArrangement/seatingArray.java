@@ -19,9 +19,9 @@ This will continue until all seats are filled.
 use first distanced seat
 
 todo:
-get the first seat and divide the array
-fix second half filling
-fix print
+get the first seat and divide the array: done
+fix second half filling: in progress
+fix print: needs attention
 */
 import java.util.Scanner;
 import java.util.Random;
@@ -73,8 +73,10 @@ public class seatingArray
 			for(int i = 0; i < seating.length; i++){
 				if(seating[i] == true){
 					if(firstSeat == -1){firstSeat = i;}
-					if(firstSeat != -1){nextSeat = i;}
-					//
+					if(firstSeat != -1 && i != firstSeat){nextSeat = i;}
+				}
+				if(seating[i] == false){
+					if(firstSeat != -1){/**/}
 				}
 			}
 			//
