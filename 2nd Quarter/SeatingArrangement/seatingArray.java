@@ -74,12 +74,14 @@ public class seatingArray
 				if(seating[i] == true){
 					if(firstSeat == -1){firstSeat = i;}
 					if(firstSeat != -1 && i != firstSeat){nextSeat = i;}
+					if(firstseat == seating.l
 				}
 				if(seating[i] == false){
-					if(firstSeat != -1){/**/}
+					//_ _ _ _ x _ _ x _
+					//if(firstSeat != -1){/**/}
 				}
 			}
-			//
+			if(firstSeat == &&  nextSeat == -1){
 			firstSeat = -1;
 		}
 
