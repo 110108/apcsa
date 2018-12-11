@@ -56,6 +56,11 @@ public class seatingArray
       //main loop
       int count = 0;
       do{
+		  //testing stuff (will put print loop here eventually)
+		  System.out.println("\nmain do while\n");
+		  System.out.println(Arrays.toString(seating) + " " + count);
+
+		  //sets middle seat to true
         if(count==0){
 			if(seating.length > 1){
 				seat=firstSeat=((seating.length)/2);
@@ -67,28 +72,27 @@ public class seatingArray
           count++;
           continue;
         }
-
+        //sets everything else
         else{
 			count++;
+			//for loop for handling array
+			int scount = 0;
 			for(int i = 0; i < seating.length; i++){
 				if(seating[i] == true){
 					if(firstSeat == -1){firstSeat = i;}
 					if(firstSeat != -1 && i != firstSeat){nextSeat = i;}
-					if(firstseat == seating.l
 				}
 				if(seating[i] == false){
-					//_ _ _ _ x _ _ x _
+					scount++;
+					//_ _ _ x _ x _
 					//if(firstSeat != -1){/**/}
 				}
+				if(firstSeat == seating.length/2 &&  nextSeat == -1){seat = ((seating.length/4)+1) + seating.length/2;}
+				if(firstSeat == seating.length/2 &&  nextSeat == ((seating.length/4)+1) + seating.length/2){seat = (seating.length/4);}
 			}
-			if(firstSeat == &&  nextSeat == -1){
-			firstSeat = -1;
+			firstSeat = nextSeat = -1;
+			seating[seat] = true;
 		}
-
-
-        //testing stuff
-        System.out.println("\nmain do while\n");
-        System.out.println(Arrays.toString(seating) + " " + count);
       }while((!seating[0] == true)&&(count < (seating.length * 2)));
 
       //print statement(s)
