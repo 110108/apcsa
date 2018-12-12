@@ -38,6 +38,11 @@ public class seatingArray
       int nextSeat = -1;
       boolean[] seating;
 
+      //temps
+      int bigGap = 0;
+      int gap = 0;
+      int index = 0;
+
       //defining the array
       System.out.print("please enter the number of seats: ");
       while(!sc.hasNextInt()){
@@ -76,14 +81,13 @@ public class seatingArray
         else{
 			count++;
 			//for loop for handling array
-			int scount = 0;
 			for(int i = 0; i < seating.length; i++){
 				if(seating[i] == true){
 					if(firstSeat == -1){firstSeat = i;}
 					if(firstSeat != -1 && i != firstSeat){nextSeat = i;}
 				}
 				if(seating[i] == false){
-					scount++;
+					gap++;
 					//_ _ _ x _ x _
 					//if(firstSeat != -1){/**/}
 				}
@@ -96,6 +100,7 @@ public class seatingArray
       }while((!seating[0] == true)&&(count < (seating.length * 2)));
 
       //print statement(s)
+      System.out.println(bigGap);
       System.out.println(Arrays.toString(seating));
     }
   }
