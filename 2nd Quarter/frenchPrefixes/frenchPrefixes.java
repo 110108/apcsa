@@ -17,13 +17,13 @@ public class frenchPrefixes
       first=name.charAt(0);
       last=name.charAt((name.length())-1);
 
-      if(first==65||first==69||first==73||first==79||first==85||first==97||first==101||first==105||first==111||first==117){
-		  prefix = ("l' ");
-		  print = true;
-	  }
+      if(name=="estas-unis"||name=="pays-bas"){
+  		  prefix = ("les ");
+  		  print = true;
+  	  }
 
-	  else if(name=="estas-unis"||name=="pays-bas"){
-		  prefix = ("les ");
+      else if(first==65||first==69||first==73||first==79||first==85||first==97||first==101||first==105||first==111||first==117){
+		  prefix = ("l' ");
 		  print = true;
 	  }
 

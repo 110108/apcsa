@@ -72,7 +72,7 @@ public class PaintCalc
 		}
 
 		//final outs
-		System.out.println("Total number of gallons: " + galNum);
-		System.out.println("Total number of quarts: " + quartNum);
+		System.out.println("If gallons only: " + (galNum+1));
+		System.out.println("If quarts are avalable: " + galnum + " Gallon(s) and " + quartNum + " Quart(s)");
 	}
 }

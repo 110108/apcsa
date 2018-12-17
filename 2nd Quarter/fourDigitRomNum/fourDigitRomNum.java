@@ -53,9 +53,9 @@ public class fourDigitRomNum
           continue;
         }
          if(num>=4){
-			 num-=4;
-			 rom+="IV";
-			 continue;
+           num-=4;
+           rom+="IV";
+           continue;
         }
         if(num>=1){
           num-=1;
