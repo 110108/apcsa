@@ -5,6 +5,9 @@ public class ForLoopPractice3
 	{
 		int num;
 		int counter = 0;
+		int[] intArray = new int[5];
+
+
 
 		System.out.print("Enter a positive integer: ");
 		num = Keyboard.readInt();
