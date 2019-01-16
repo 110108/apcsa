@@ -1,16 +1,25 @@
-import cs1.Keyboard;
+import java.util.Scanner;
 public class ForLoopPractice3
 {
 	public static void main(String[] args)
 	{
+		Scanner sc = new Scanner(System.in);
 		int num;
 		int counter = 0;
-		int[] intArray = new int[5];
+		int ttl=0;
+		int[] intArray = {5,3,12,9,7};
+		System.out.println("intArray displayed using for each loop:");
+		for(int i : intArray){
+			System.out.print(i+" ");
+		}
 
+		//totaling array
+		for(int i : intArray){
+			ttl+=i;
+		}
 
-
-		System.out.print("Enter a positive integer: ");
-		num = Keyboard.readInt();
+		System.out.print("\nEnter a positive integer: ");
+		num = sc.nextInt();
 
 		for(int i = num; num<=50; num+=i)
 		{
@@ -19,22 +28,24 @@ public class ForLoopPractice3
 	}
 }
 
-
+/*
 // Below each comment, add the code indicated.
 //I already have code to display a description of each item in the output.public class
-ForEachLoopArrayPractice{public static void main(String[] args){
+//ForEachLoopArrayPractice{public static void main(String[] args){
 // Declare and initialize array variable "intArray" to hold the values: 5,3,12,9,7
-// Display intArray using a for-each loopSystem.out.println("\n*******************************************************");
-System.out.println("intArray displayed using for each loop loop\n");
+// Display intArray using a for-each loop
+//System.out.println("\n*******************************************************");
+//
 // Sum of the elements of intArray is calculated and displayed using a for-each loop
-System.out.println("\n*******************************************************");
-System.out.println("Sum of the elements of intArray\n");
+//System.out.println("\n*******************************************************");
+//System.out.println("Sum of the elements of intArray\n");
 // Count the number of elements in intArray that are between 5 and 10, inclusive.
 //Display the result: ___ elements are between 5 and 10
 System.out.println("\n***********************************************************");
 System.out.println("Counting number of items between 5 and 10.\n");
 // Search intArrayList for the number 7 using a for-each loop.
-//Display "7 was found" or "7 was not found"System.out.println("\n***********************************************************");
+//Display "7 was found" or "7 was not found"
+System.out.println("\n***********************************************************");
 System.out.println("Search intArray for the number 7 using a for-each loop.\n");
 // Declare and initialize array variable "words" to hold the values: "keys", "camera", "vacation", "magic", "minivan"
 // Display words using a for-each loop
@@ -42,6 +53,7 @@ System.out.println("\n*******************************************************");
 System.out.println("words displayed using for each loop loop\n");
 // Length of each element of words is displayedSystem.out.println("\n*******************************************************");
 System.out.println("Length of each element of words is: \n");
-/* Count and display each element in words that start with "m".  Display the result.   For example, the output might be:   magic   minivan   2 words start with m*/
+/* Count and display each element in words that start with "m".  Display the result.   For example, the output might be:   magic   minivan   2 words start with m
 System.out.println("\n***********************************************************");
 System.out.println("Words that start with m.\n");}}
+*/
