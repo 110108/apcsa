@@ -20,12 +20,21 @@ public class ListReview
 	  }
 	  System.out.print(Arrays.toString(wl1.toArray()));
    }
-/*
-   private static ArrayList getList(Scanner inScanner)
-   {
-	   //
-   }
 
+   private static ArrayList getList(Scanner in)
+   {
+	   ArrayList<String> temp = new ArrayList<String>();
+	    while(true){
+	   		  System.out.print("Enter a word ('XXX' to quit): ");
+	   		  String str = in.nextLine();
+	   		  if(str.contains("xxx")||str.contains("Xxx")||str.contains("xXx")||str.contains("XXx")||str.contains("xxX")||str.contains("XxX")||str.contains("xXX")||str.contains("XXX")){
+	   			  break;
+	   		  }
+	   		  temp.add(str);
+		  }
+		  return temp;
+   }
+/*
    private static void displayList(ArrayList myList)
    {
 	   //
