@@ -8,17 +8,27 @@ public class ListReview
    {
       Scanner sc = new Scanner(System.in);
       ArrayList<String> wl1 = new ArrayList<String>();
-      //ArrayList wl2 = new ArrayList();
-
-      while(true){
-		  System.out.print("Enter a word ('XXX' to quit): ");
-		  String str = sc.nextLine();
-		  if(str.contains("xxx")||str.contains("Xxx")||str.contains("xXx")||str.contains("XXx")||str.contains("xxX")||str.contains("XxX")||str.contains("xXX")||str.contains("XXX")){
-			  break;
-		  }
-		  wl1.add(str);
-	  }
-	  System.out.print(Arrays.toString(wl1.toArray()));
+      ArrayList<String> wl2 = new ArrayList<String>();
+      ArrayList<String> merged=new ArrayList<String>();
+      //Entering wordlists
+      System.out.println("Enter the first word list: ");
+      wl1=getList(sc);
+      System.out.println("Enter the second word list: ");
+      wl2=getList(sc);
+      //printing word lists
+      System.out.println("Word list 1");
+      System.out.println("----------");
+	  displayList(wl1);
+	  System.out.println("Word list 2");
+      System.out.println("----------");
+	  displayList(wl2);
+	  //merging and reprinting lists
+	  System.out.println("Word list 1 merged with word list 2");
+      System.out.println("-----------------------------------");
+      //merge code
+      System.out.println("Word list 2 merged with word list 1");
+      System.out.println("-----------------------------------");
+      //more merge code
    }
 
    private static ArrayList getList(Scanner in)
@@ -34,18 +44,27 @@ public class ListReview
 		  }
 		  return temp;
    }
-/*
-   private static void displayList(ArrayList myList)
+
+   private static void displayList(ArrayList<String> myList)
    {
-	   //
+	   for(String word:myList)
+	   {
+		   System.out.println(word);
+	   }
    }
 
-   private static ArrayList mergeLists(ArrayList list1, ArrayList list2)
+   private static ArrayList mergeLists(ArrayList<String> list1, ArrayList<String> list2)
    {
-	   //
-	   return merged;
+	   ArrayList<String> merge = new ArrayList<String>();
+	   for(int i=0,j=0,k=0; i<=(list1.size() + list2.size()); i++)
+	   {
+		   if(i%2==0){j++;}
+		   else{k++;}
+		   if(list1.get(j)&&i%2==0){/**/}
+	   }
+	   return merge;
    }
-   */
+
 }
 
 /*
