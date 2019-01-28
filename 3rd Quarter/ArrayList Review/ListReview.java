@@ -16,19 +16,19 @@ public class ListReview
       System.out.println("Enter the second word list: ");
       wl2=getList(sc);
       //printing word lists
-      System.out.println("Word list 1");
+      System.out.println("\nWord list 1");
       System.out.println("----------");
 	  displayList(wl1);
-	  System.out.println("Word list 2");
+	  System.out.println("\nWord list 2");
       System.out.println("----------");
 	  displayList(wl2);
 	  //merging and reprinting lists
-	  System.out.println("Word list 1 merged with word list 2");
+	  System.out.println("\nWord list 1 merged with word list 2");
       System.out.println("-----------------------------------");
-      //merge code
-      System.out.println("Word list 2 merged with word list 1");
+      displayList(mergeLists(wl1, wl2));
+      System.out.println("\nWord list 2 merged with word list 1");
       System.out.println("-----------------------------------");
-      //more merge code
+      displayList(mergeLists(wl2, wl1));
    }
 
    private static ArrayList getList(Scanner in)
@@ -58,9 +58,12 @@ public class ListReview
 	   ArrayList<String> merge = new ArrayList<String>();
 	   for(int i=0,j=0,k=0; i<=(list1.size() + list2.size()); i++)
 	   {
-		   if(i%2==0){j++;}
-		   else{k++;}
-		   if(list1.get(j)&&i%2==0){/**/}
+		   if(i<list1.size()){
+			   merge.add(list1.get(i));
+		   }
+		   if(i<list2.size()){
+			   merge.add(list2.get(i));
+		   }
 	   }
 	   return merge;
    }
