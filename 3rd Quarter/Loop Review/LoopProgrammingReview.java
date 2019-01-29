@@ -7,7 +7,7 @@ public class LoopProgrammingReview
 		int progNum = 1;
 		{
 			System.out.println("*** Program " + progNum + " ***");
-			  add or remove // at start of line
+			  //add or remove // at start of line
 
 
 			String answer;
