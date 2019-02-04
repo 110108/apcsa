@@ -5,6 +5,7 @@ public class LoopProgrammingReview
 	public static void main(String[] args)
 	{
 		int progNum = 1;
+		Scanner in = new Scanner(System.in);
 		{
 			System.out.println("*** Program " + progNum + " ***");
 			  //add or remove // at start of line
@@ -15,13 +16,13 @@ public class LoopProgrammingReview
 			do
 			{
 				System.out.print("Enter a string that does not contain the letter s: ");
-				answer = in.readString();
+				answer = in.nextLine();
 
-				if ((answer.toLowerCase).contains("s"))  //ADD
+				if ((answer.toLowerCase()).contains("s"))  //ADD
 				{
 					System.out.println("Error - string should not contain the letter s\n");
 				}
-			}while (); //ADD
+			}while ((answer.toLowerCase()).contains("s")); //ADD
 
 			System.out.println("Yay - a string with no letter s\n");
 			progNum++;
@@ -31,7 +32,7 @@ public class LoopProgrammingReview
 
 		{
 			System.out.println("*** Program " + progNum + " ***");
-			/*
+
 
 
 			int num;
@@ -39,31 +40,30 @@ public class LoopProgrammingReview
 			do
 			{
 				System.out.print("Enter an int in the range [3,8]: "); //NOTE: When checking your program, be sure to check the boundary/edge cases - particulary the value 3 and 8
-				num = in.readInt();
+				num = in.nextInt();
 
-				if ()	//ADD
+				if (num < 3)	//ADD
 				{
 					System.out.println("Error - number is less than 3\n");
 				}
-				else if ()	//ADD
+				else if (num > 8)	//ADD
 				{
 					System.out.println("Error - number is greater than 8\n");
 				}
-			}while (	);//ADD
+			}while (num<3&&num>8);//ADD
 
 			System.out.println("Yay - " + num + " is in the range [3,8]\n");
-			*/
+
 			progNum++;
 		}
 
 
 		{
 			System.out.println("*** Program " + progNum + " ***");
-			/*
 
 			int num;				//current number entered by user
 			int sum = 0;			//sum of the negative numbers entered
-			int numNegatives = 0; 	//number of negative numbers entered
+			int numNeg = 0; 	//number of negative numbers entered
 
 
 			System.out.println("Please enter four negative numbers below.");
@@ -71,29 +71,29 @@ public class LoopProgrammingReview
 
 			do
 			{
-				System.out.print("Enter int #" + (numNegatives + 1)+ ": ");
-				num = in.readInt();
+				System.out.print("Enter int #" + (numNeg + 1)+ ": ");
+				num = in.nextInt();
 
-				if ()	//ADD
+				if (num<0)	//ADD
 				{
 					sum = sum + num;
-					numNegatives++;
+					numNeg++;
 				}
 				else
 				{
 					System.out.println("Error - number is not negative\n");
 				}
 
-			}while ();	//ADD
+			}while (numNeg<4);	//ADD
 
 			System.out.println("The sum of the negative number is: " + sum + "\n");
-			*/
+
 			progNum++;
 		}
 
 		{
 			System.out.println("*** Program " + progNum + " ***");
-			/*
+
 
 			String answer;
 			String lastCharacter;
@@ -101,27 +101,27 @@ public class LoopProgrammingReview
 			do
 			{
 				System.out.print("Enter a string that has length of at least 5 and the last letter is an s: ");
-				answer = in.readString();
+				answer = in.nextLine();
 
-				lastCharacter = ; //ADD code to find the last character (using substring) and store it in variable lastCharacter
+				lastCharacter = answer.substring(answer.length()); //ADD code to find the last character (using substring) and store it in variable lastCharacter
 
-				if ()	//ADD
+				if (lastCharacter != "s" && answer.length()<5)	//ADD
 				{
 					System.out.println("String is too short and the last letter is not an s\n");
 				}
-				else if ()	//ADD
+				else if (answer.length()<5)	//ADD
 				{
 					System.out.println("String is too short\n");
 				}
-				else if()	//ADD
+				else if(lastCharacter != "s")	//ADD
 				{
 					System.out.println("last letter is not an s\n");
 				}
 
-			}while ();		//ADD
+			}while (lastCharacter != "s" || answer.length()<5);		//ADD
 
 			System.out.println("Yay - the length is " + answer.length() + " and last letter is an s\n");
-			*/
+
 			progNum++;
 		}
 
@@ -133,6 +133,7 @@ public class LoopProgrammingReview
 			The 2 is found by adding the two numbers before it (1+1)
 			The 3 is found by adding the two numbers before it (1+2),
 			And the 5 is (2+3) and so on!
+			*/
 			/*
 
 			ArrayList< > myArray
@@ -154,7 +155,7 @@ public class LoopProgrammingReview
 				add together the last two values of myArray add append the sum to the end of the list
 			}
 			print myArray
-			*/
+
 			progNum++;
 		}
 
