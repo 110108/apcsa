@@ -6,7 +6,7 @@ public class LoopProgrammingReview
 	{
 		int progNum = 1;
 		Scanner in = new Scanner(System.in);
-		{
+		{/*
 			System.out.println("*** Program " + progNum + " ***");
 			  //add or remove // at start of line
 
@@ -103,7 +103,9 @@ public class LoopProgrammingReview
 				System.out.print("Enter a string that has length of at least 5 and the last letter is an s: ");
 				answer = in.nextLine();
 
-				lastCharacter = answer.substring(answer.length()); //ADD code to find the last character (using substring) and store it in variable lastCharacter
+				lastCharacter = answer.substring(answer.length()-1); //ADD code to find the last character (using substring) and store it in variable lastCharacter
+
+				System.out.println("Last Char:"+lastCharacter);
 
 				if (lastCharacter != "s" && answer.length()<5)	//ADD
 				{
@@ -123,6 +125,7 @@ public class LoopProgrammingReview
 			System.out.println("Yay - the length is " + answer.length() + " and last letter is an s\n");
 
 			progNum++;
+*/
 		}
 
 		{
@@ -134,21 +137,21 @@ public class LoopProgrammingReview
 			The 3 is found by adding the two numbers before it (1+2),
 			And the 5 is (2+3) and so on!
 			*/
-			/*
 
-			ArrayList< > myArray
+
+			ArrayList<int> myArray
 			myArray.add(0)
 			myArray.add(1)
 			Scanner in
-			int stoppingPoint
+			int stoppingPoint;
 			// prompt for an integer to use as a stopping point
-			// while scanner does not have next int
+			while(!in.hasNextInt)// scanner does not have next int
 			{
-				// print "Not an integer number"
+				System.out.print("Not an integer number");
 				in.nextLine(); // throw away everything currently in the scanner
 				// prompt for an integer to use as a stopping point
 			}
-
+			stoppingPoint = in.nextInt();
 
 			while(last value of myArray is less than stoppingPoint)
 			{
