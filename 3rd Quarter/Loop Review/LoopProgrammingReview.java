@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 public class LoopProgrammingReview
 {
@@ -139,25 +141,26 @@ public class LoopProgrammingReview
 			*/
 
 
-			ArrayList<int> myArray
-			myArray.add(0)
-			myArray.add(1)
-			Scanner in
+			ArrayList<Integer> myArray = new ArrayList<Integer>();
+			myArray.add(0);
+			myArray.add(1);
 			int stoppingPoint;
 			// prompt for an integer to use as a stopping point
-			while(!in.hasNextInt)// scanner does not have next int
+			System.out.print("Please enter an integer to serve as a stopping point");
+			while(!in.hasNextInt())// scanner does not have next int
 			{
 				System.out.print("Not an integer number");
 				in.nextLine(); // throw away everything currently in the scanner
-				// prompt for an integer to use as a stopping point
+				System.out.print("Please enter an integer to serve as a stopping point");// prompt for an integer to use as a stopping point
 			}
 			stoppingPoint = in.nextInt();
 
-			while(last value of myArray is less than stoppingPoint)
+			while(myArray.get(myArray.size()) < stoppingPoint)
 			{
-				add together the last two values of myArray add append the sum to the end of the list
+				myArray.add();
+				//add together the last two values of myArray add append the sum to the end of the list
 			}
-			print myArray
+			System.out.print(myArray);
 
 			progNum++;
 		}
