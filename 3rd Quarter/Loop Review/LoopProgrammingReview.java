@@ -7,7 +7,7 @@ public class LoopProgrammingReview
 	public static void main(String[] args)
 	{
 		int progNum = 1;
-		Scanner in = new Scanner(System.in);
+		Scanner in = new Scanner(System.in);/*
 		{
 			System.out.println("*** Program " + progNum + " ***");
 			  //add or remove // at start of line
@@ -52,7 +52,7 @@ public class LoopProgrammingReview
 				{
 					System.out.println("Error - number is greater than 8\n");
 				}
-			}while (num<3&&num>8);//ADD
+			}while (num<3||num>8);//ADD
 
 			System.out.println("Yay - " + num + " is in the range [3,8]\n");
 
@@ -100,6 +100,8 @@ public class LoopProgrammingReview
 			String answer;
 			String lastCharacter;
 
+			in.nextLine();
+
 			do
 			{
 				System.out.print("Enter a string that has length of at least 5 and the last letter is an s: ");
@@ -107,9 +109,9 @@ public class LoopProgrammingReview
 
 				lastCharacter = answer.substring(answer.length()-1); //ADD code to find the last character (using substring) and store it in variable lastCharacter
 
-				System.out.println("Last Char:"+lastCharacter);
+				System.out.println("Last Char: "+lastCharacter);
 
-				if (lastCharacter != "s" && answer.length()<5)	//ADD
+				if (!(lastCharacter.contains("s") || lastCharacter.contains("S")) && answer.length()<5)	//ADD
 				{
 					System.out.println("String is too short and the last letter is not an s\n");
 				}
@@ -117,12 +119,12 @@ public class LoopProgrammingReview
 				{
 					System.out.println("String is too short\n");
 				}
-				else if(lastCharacter != "s")	//ADD
+				else if(!(lastCharacter.contains("s")||lastCharacter.contains("S")))	//ADD
 				{
 					System.out.println("last letter is not an s\n");
 				}
 
-			}while (lastCharacter != "s" || answer.length()<5);		//ADD
+			}while (!(lastCharacter.contains("s")||lastCharacter.contains("S")) || answer.length()<5);		//ADD
 
 			System.out.println("Yay - the length is " + answer.length() + " and last letter is an s\n");
 
@@ -138,7 +140,7 @@ public class LoopProgrammingReview
 			The 2 is found by adding the two numbers before it (1+1)
 			The 3 is found by adding the two numbers before it (1+2),
 			And the 5 is (2+3) and so on!
-			*/
+			/
 
 
 			ArrayList<Integer> myArray = new ArrayList<Integer>();
@@ -164,7 +166,7 @@ public class LoopProgrammingReview
 
 			progNum++;
 		}
-
+*/
 		{
 			System.out.println("\n*** Program " + progNum + " ***");
 			// Ask the user for several numbers or Q to quit. Then calculate the average of their numbers.
@@ -172,28 +174,36 @@ public class LoopProgrammingReview
 
 			int count = 0;
 			int sum = 0;
+			boolean check = true;
 
-			while(true) // repeat until the use types Q then break
+			while(check == true) // repeat until the user types Q then break
 			{
 				System.out.print("\nPlease enter an integer or q to quit: ");// prompt for an integer or Q to quit.
 				if(in.hasNextInt()) // if the scanner has next int
 				{
-					sum =+ in.nextInt();
+					sum += in.nextInt();
 					count ++;
 				}
-				else if(in.nextLine().contains("q") || in.nextLine().contains("Q"))
+				else if(in.hasNextLine())
 				{
-					break;
-				}
-				else
-				{
-					System.out.print("Not an integer number");
-					//in.nextLine(); // throw away everything currently in the scanner
+					String i=in.nextLine();
+					String j=i.toLowerCase();
+
+					if(j.equals("q"))
+					{
+						check = false;
+					}
+
+					else if(!j.equals("q"))
+					{
+						System.out.print("Not an integer number");
+					}
 				}
 			}
 			if(count > 0)
 			{
 				System.out.println("Average: "+sum/count);
+				System.out.println(sum+"  "+count);
 			}
 		}
 	}
