@@ -8,7 +8,7 @@ public class LoopProgrammingReview
 	{
 		int progNum = 1;
 		Scanner in = new Scanner(System.in);
-		{/*
+		{
 			System.out.println("*** Program " + progNum + " ***");
 			  //add or remove // at start of line
 
@@ -127,7 +127,7 @@ public class LoopProgrammingReview
 			System.out.println("Yay - the length is " + answer.length() + " and last letter is an s\n");
 
 			progNum++;
-*/
+
 		}
 
 		{
@@ -155,10 +155,10 @@ public class LoopProgrammingReview
 			}
 			stoppingPoint = in.nextInt();
 
-			while(myArray.get(myArray.size()) < stoppingPoint)
+			while(myArray.get(myArray.size()-1) < stoppingPoint)
 			{
-				myArray.add();
 				//add together the last two values of myArray add append the sum to the end of the list
+				myArray.add((myArray.get(myArray.size()-1)+myArray.get(myArray.size()-2)));
 			}
 			System.out.print(myArray);
 
@@ -166,43 +166,35 @@ public class LoopProgrammingReview
 		}
 
 		{
-			System.out.println("*** Program " + progNum + " ***");
+			System.out.println("\n*** Program " + progNum + " ***");
 			// Ask the user for several numbers or Q to quit. Then calculate the average of their numbers.
 
-			/*
-			count = 0
-			sum = 0
 
-			while true // repeat until the use types Q then break
+			int count = 0;
+			int sum = 0;
+
+			while(true) // repeat until the use types Q then break
 			{
-				// prompt for an integer or Q to quit.
-				if ??? // if the scanner has next int
+				System.out.print("\nPlease enter an integer or q to quit: ");// prompt for an integer or Q to quit.
+				if(in.hasNextInt()) // if the scanner has next int
 				{
-					// get the next int and add it to the sum
-					// increment the count
+					sum =+ in.nextInt();
+					count ++;
 				}
-				else if the scanner's next line is Q
+				else if(in.nextLine().contains("q") || in.nextLine().contains("Q"))
 				{
-					exit the loop
+					break;
 				}
 				else
 				{
-					// print "Not an integer number"
-					in.nextLine(); // throw away everything currently in the scanner
+					System.out.print("Not an integer number");
+					//in.nextLine(); // throw away everything currently in the scanner
 				}
 			}
-			if count > 0
+			if(count > 0)
 			{
-				// calculate and print average
+				System.out.println("Average: "+sum/count);
 			}
-
-
-			*/
-
-
 		}
-
-
 	}
-
 }
