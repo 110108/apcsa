@@ -7,7 +7,7 @@ public class LoopProgrammingReview
 	public static void main(String[] args)
 	{
 		int progNum = 1;
-		Scanner in = new Scanner(System.in);/*
+		Scanner in = new Scanner(System.in);
 		{
 			System.out.println("*** Program " + progNum + " ***");
 			  //add or remove // at start of line
@@ -140,7 +140,7 @@ public class LoopProgrammingReview
 			The 2 is found by adding the two numbers before it (1+1)
 			The 3 is found by adding the two numbers before it (1+2),
 			And the 5 is (2+3) and so on!
-			/
+			*/
 
 
 			ArrayList<Integer> myArray = new ArrayList<Integer>();
@@ -148,7 +148,7 @@ public class LoopProgrammingReview
 			myArray.add(1);
 			int stoppingPoint;
 			// prompt for an integer to use as a stopping point
-			System.out.print("Please enter an integer to serve as a stopping point");
+			System.out.print("Please enter an integer to serve as a stopping point: ");
 			while(!in.hasNextInt())// scanner does not have next int
 			{
 				System.out.print("Not an integer number");
@@ -157,7 +157,7 @@ public class LoopProgrammingReview
 			}
 			stoppingPoint = in.nextInt();
 
-			while(myArray.get(myArray.size()-1) < stoppingPoint)
+			while((myArray.get(myArray.size()-1)+myArray.get(myArray.size()-2) < stoppingPoint))
 			{
 				//add together the last two values of myArray add append the sum to the end of the list
 				myArray.add((myArray.get(myArray.size()-1)+myArray.get(myArray.size()-2)));
@@ -166,7 +166,7 @@ public class LoopProgrammingReview
 
 			progNum++;
 		}
-*/
+
 		{
 			System.out.println("\n*** Program " + progNum + " ***");
 			// Ask the user for several numbers or Q to quit. Then calculate the average of their numbers.
@@ -178,7 +178,8 @@ public class LoopProgrammingReview
 
 			while(check == true) // repeat until the user types Q then break
 			{
-				System.out.print("\nPlease enter an integer or q to quit: ");// prompt for an integer or Q to quit.
+				System.out.print("Please enter an integer or q to quit: ");
+				// prompt for an integer or Q to quit.
 				if(in.hasNextInt()) // if the scanner has next int
 				{
 					sum += in.nextInt();
@@ -186,15 +187,14 @@ public class LoopProgrammingReview
 				}
 				else if(in.hasNextLine())
 				{
-					String i=in.nextLine();
-					String j=i.toLowerCase();
+					char c = in.next().charAt(0);
 
-					if(j.equals("q"))
+					if(c=='q'||c=='Q')
 					{
 						check = false;
 					}
 
-					else if(!j.equals("q"))
+					else
 					{
 						System.out.print("Not an integer number");
 					}
@@ -203,7 +203,6 @@ public class LoopProgrammingReview
 			if(count > 0)
 			{
 				System.out.println("Average: "+sum/count);
-				System.out.println(sum+"  "+count);
 			}
 		}
 	}
