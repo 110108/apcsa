@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 public class Arrays2D
 {
@@ -6,6 +9,8 @@ public class Arrays2D
    {
 	  File data = new File("C:\\Users\\110108\\Documents\\GitHub\\apcsa\\3rd Quarter\\2d arrays\\testData.txt");
       Scanner sc = new Scanner(System.in);
-      Scanner file = new Scanner(data);
+      Scanner in = new Scanner(data);
+
+
    }
 }
