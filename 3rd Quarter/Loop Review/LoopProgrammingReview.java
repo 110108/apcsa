@@ -202,7 +202,7 @@ public class LoopProgrammingReview
 			}
 			if(count > 0)
 			{
-				System.out.println("Average: "+sum/count);
+				System.out.println("Average: "+(double)sum/count);
 			}
 		}
 	}
