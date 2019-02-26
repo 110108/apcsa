@@ -39,6 +39,11 @@ public class GuessWithFileInput {
 	// words in row 2, and ignores all words with less than 3 characters.
 	public static String[][] makeTwoDimList(ArrayList<String> allWords){
 		// Count the number of level #0 3-4 char words in allWords
+		int l1;
+		for(int i=0; i<=allWords.length(); i++)
+		{
+			if(sc.next
+		}
 		// Count the number of level #1 5-6 char words in allWords
 		// Count the number of level #2 7+ char words in allWords
 
