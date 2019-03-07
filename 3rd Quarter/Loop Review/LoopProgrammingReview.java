@@ -109,8 +109,6 @@ public class LoopProgrammingReview
 
 				lastCharacter = answer.substring(answer.length()-1); //ADD code to find the last character (using substring) and store it in variable lastCharacter
 
-				System.out.println("Last Char: "+lastCharacter);
-
 				if (!(lastCharacter.contains("s") || lastCharacter.contains("S")) && answer.length()<5)	//ADD
 				{
 					System.out.println("String is too short and the last letter is not an s\n");

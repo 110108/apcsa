@@ -15,6 +15,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.*;
 
 
 public class GuessWithFileInput {
@@ -29,8 +30,10 @@ public class GuessWithFileInput {
 	// The method should read words from the Scanner until there are no more words in the file
 	// (i.e. inScanner.hasNext() is false).  The list of strings should be returned to the calling program.
 	public static ArrayList<String> getList(Scanner inScanner) {
-		// Fill in the body
 		ArrayList<String> list = new ArrayList<String>();
+		while(inScanner.hasNext()){
+			list.add(inScanner.next());
+		}
 		return list;
 	}
 
@@ -38,11 +41,12 @@ public class GuessWithFileInput {
 	// 2D Array with 3-4 character words in row 0, 5-6 character words in row 1, 7+ character
 	// words in row 2, and ignores all words with less than 3 characters.
 	public static String[][] makeTwoDimList(ArrayList<String> allWords){
+	////Scanner sc = new Scanner(allWords);
 		// Count the number of level #0 3-4 char words in allWords
 		int l1;
-		for(int i=0; i<=allWords.length(); i++)
+		for(int i=0; i<=allWords.size(); i++)
 		{
-			if(sc.next
+			allWords.get(i);
 		}
 		// Count the number of level #1 5-6 char words in allWords
 		// Count the number of level #2 7+ char words in allWords
@@ -50,8 +54,9 @@ public class GuessWithFileInput {
 		// Declare your 2D array
 
 		// Fill in the body
+		ArrayList[][] twoDimList;
 
-		return twoDimList;
+		return null;//Arrays.deepToString(twoDimList);
 	}
 
 	// Given two strings as input, compares the first string (guess) to the second
